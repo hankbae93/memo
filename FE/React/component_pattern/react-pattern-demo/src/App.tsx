@@ -1,23 +1,22 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import Spinner from "./components/vac/Spinner";
+import Calendar from "./components/toss/Calendar";
+import AmazingButton from "./components/toss/AmazingButton";
+import FrameworkSelect from "./components/toss/FrameworkSelect";
+import "./App.css";
+import RFselect from "./components/toss/RFselect";
 
 function App() {
 	return (
 		<div className='App'>
-			<header className='App-header'>
-				<img src={logo} className='App-logo' alt='logo' />
-				<Spinner />
-				<a
-					className='App-link'
-					href='https://reactjs.org'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
-					Learn React
-				</a>
-			</header>
+			{/* <Spinner /> */}
+			{/* <Calendar /> */}
+			{/* <AmazingButton /> */}
+			{/* <FrameworkSelect /> */}
+			<div>
+				<RFselect />
+			</div>
+			<FrameworkSelect />
 		</div>
 	);
 }
