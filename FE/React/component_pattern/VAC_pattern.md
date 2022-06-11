@@ -263,6 +263,8 @@ const SpinBoxView = ({
 );
 ```
 
+<br />
+
 ## 6. Presentational 컴포넌트와 VAC
 
 **Presentational 컴포넌트**
@@ -280,7 +282,3 @@ const SpinBoxView = ({
 [참고자료](https://wit.nts-corp.com/2021/08/11/6461)
 
 <br/>
-
-# `Toss Headless Ui`
-
-# `Atomic`
