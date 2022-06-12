@@ -203,3 +203,8 @@ interface Props {
 
 - 분리할때 실제로 복잡도를 낮추는가
 - 재사용 가능한가?
+
+(변경에 유연한 컴포넌트
+)[https://jbee.io/web/components-should-be-flexible/]
+(Headless UI Library란?
+)[https://jbee.io/react/headless-concept/]
