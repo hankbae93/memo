@@ -175,3 +175,31 @@ const FrameworkSelect = () => {
 
 export default FrameworkSelect;
 ```
+
+<br />
+
+# 3. 도메인 분리하기
+
+> 컴포넌트의 인터페이스는 일반적으로 표현해야 이해하기 쉽다.
+
+```tsx
+interface Props {
+	options: Array<{ label: string }>;
+	value?: string[];
+	onChange?: (selecteds: string[]) => void;
+	valueAs?: (value?: string[]) => string;
+}
+```
+
+# tips
+
+1. 인터페이스를 먼저 고민하기
+
+- 의도가 무엇인가?
+- 컴포넌트의 기능은 무엇인가
+- 어떻게 표현되어야 하는가
+
+2. 컴포넌트를 나누는 이유 먼저 고민하기
+
+- 분리할때 실제로 복잡도를 낮추는가
+- 재사용 가능한가?

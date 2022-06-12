@@ -4,6 +4,7 @@ import {
 	DropdownItemWrapper,
 	DropdownMenuWrapper,
 	DropdownWrapper,
+	Modal,
 } from "./Dropdown.style";
 
 interface DropdownPropsTypes {
@@ -64,7 +65,23 @@ const DropdownItem = ({ children }: { children: string }) => {
 	);
 };
 
+const DropdownModal = ({
+	controls,
+	children,
+}: {
+	controls: ReactNode;
+	children: ReactNode;
+}) => {
+	return (
+		<Modal>
+			{children}
+			<div>{controls}</div>
+		</Modal>
+	);
+};
+
 Dropdown.Trigger = DropdownTrigger;
 Dropdown.Menu = DropdownMenu;
 Dropdown.Item = DropdownItem;
+Dropdown.Modal = DropdownModal;
 export default Dropdown;

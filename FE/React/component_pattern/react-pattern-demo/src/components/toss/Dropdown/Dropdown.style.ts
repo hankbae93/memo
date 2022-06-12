@@ -29,3 +29,9 @@ export const DropdownItemWrapper = styled.li`
 		background-color: #c9ddcb;
 	}
 `;
+
+export const Modal = styled.div`
+	position: absolute;
+	width: 100%;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+`;
