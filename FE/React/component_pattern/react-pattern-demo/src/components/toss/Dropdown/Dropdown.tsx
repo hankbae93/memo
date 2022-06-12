@@ -36,9 +36,14 @@ const Dropdown = ({ children, label, value, onChange }: DropdownPropsTypes) => {
 };
 
 const DropdownTrigger = ({ as }: { as: JSX.Element }) => {
-	const { open } = useContext(DropdownContext);
+	const { label, open } = useContext(DropdownContext);
 
-	return <div onClick={open}>{as}</div>;
+	return (
+		<div onClick={open}>
+			<p>{label}</p>
+			{as}
+		</div>
+	);
 };
 
 const DropdownMenu = ({ children }: { children: ReactNode }) => {

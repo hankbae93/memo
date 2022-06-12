@@ -86,8 +86,92 @@ export default AmazingButton;
 
 # 2. 한 가지 역할만 하기 [`Composition`]
 
-<img src="../../../docsImg/toss2.png" />
+<img src="../../../docsImg/toss3.png" />
+
+Select UI를 구현한 모습입니다. 아래 코드를 보시면 여러 동작들이 종속되어서 변경에 대처하기가 힘든데요.
 
 ```tsx
+const RFselect = () => {
+	const [isOpen, open, close] = useBoolean();
+	const [selected, change] = useState("");
+	const {
+		data: { frameworks: options },
+	} = useFrameworks();
 
+	return (
+		<div>
+			// 다른 컴포넌트로 변경해야되거나 label을 바꿔야되는 등 // 컴포넌트 채로
+			새로 작성해야 하는 번거로움이 있다.
+			<InputButton label='React Framework' value={selected} onClick={open} />
+			{isOpen && (
+				<Options onClick={close}>
+					{options.map((option) => {
+						return (
+							<Button
+								selected={selected === option}
+								onClick={() => change(option)}
+							>
+								{option}
+							</Button>
+						);
+					})}
+				</Options>
+			)}
+		</div>
+	);
+};
+```
+
+<img src="../../../docsImg/toss2.png" />
+
+해당 UI를 역할을 나눠서 각자 변경하는 일이 있더라도 같은 역할을 수행할 수 있게
+
+분리해봅시다.
+
+```tsx
+function Select({ label, trigger, value, onChange, options }) {
+	return (
+		<Dropdown label={label} value={value} onChange={onChange}>
+			<Dropdown.Trigger as={trigger} />
+			<Dropdown.Menu>
+				{options.map((option: any) => (
+					<Dropdown.Item>{option}</Dropdown.Item>
+				))}
+			</Dropdown.Menu>
+		</Dropdown>
+	);
+}
+```
+
+1. 메뉴가 열리고 닫는 상태를 가진 역할 => isOpen / Dropdown 컴포넌트로 부여
+
+2. 상태를 바꾸기 위한 상호작용 역할 => Trigger 컴포넌트로 부여
+
+3. 열고 닫힌 상태에 따라 노출여부가 결정되는 역할 => Menu 컴포넌트로 부여
+
+4. 메뉴를 구성하는 각각의 아이템 + 상호작용 역할 => Item 컴포넌트로 부여
+
+이제 완성된 Select 컴포넌트로 언제든 재사용가능해졌습니다.
+
+```tsx
+const FrameworkSelect = () => {
+	const {
+		data: { frameworks },
+	} = useFrameworks();
+
+	const [selected, onChange] = useState("");
+
+	return (
+		<Select
+			label='React FrameWork'
+			trigger={<InputButton value={selected} />}
+			// trigger가 언제 변경되더라도 문제가 없다.
+			options={frameworks}
+			value={selected}
+			onChange={onChange}
+		/>
+	);
+};
+
+export default FrameworkSelect;
 ```

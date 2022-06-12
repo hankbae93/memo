@@ -4,12 +4,5 @@ interface InputButtonProps {
 }
 
 export default function InputButton({ value }: InputButtonProps) {
-	return (
-		<label htmlFor='inputButton'>
-			React Framewrok
-			<div>
-				<input id='inputButton' value={value} />
-			</div>
-		</label>
-	);
+	return <input id='inputButton' value={value} />;
 }

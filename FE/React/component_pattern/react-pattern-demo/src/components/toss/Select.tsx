@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import Dropdown from "./Dropdown";
 
 interface SelectProps {
-	label?: any;
+	label: any;
 	trigger?: any;
 	value?: any;
 	onChange?: any;

@@ -21,6 +21,7 @@ const FrameworkSelect = () => {
 
 	return (
 		<Select
+			label='React FrameWork'
 			trigger={<InputButton value={selected} />}
 			options={frameworks}
 			value={selected}
