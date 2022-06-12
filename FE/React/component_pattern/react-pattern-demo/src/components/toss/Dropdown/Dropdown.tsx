@@ -1,8 +1,10 @@
-import React, { ReactNode } from "react";
-import DropdownTrigger from "./DropdownTrigger";
-import DropdownMenu from "./DropdownMenu";
-import DropdownItem from "./DropdownItem";
-import { DropdownWrapper } from "./Dropdown.style";
+import React, { createContext, ReactNode, useContext } from "react";
+import useBoolean from "../useBoolean";
+import {
+	DropdownItemWrapper,
+	DropdownMenuWrapper,
+	DropdownWrapper,
+} from "./Dropdown.style";
 
 interface DropdownPropsTypes {
 	children: ReactNode;
@@ -11,12 +13,53 @@ interface DropdownPropsTypes {
 	onChange?: any;
 }
 
+const initialState = {
+	label: "",
+	value: "",
+	onChange: (value: string) => {},
+	open: () => {},
+	close: () => {},
+	isOpen: false,
+};
+
+const DropdownContext = createContext(initialState);
+
 const Dropdown = ({ children, label, value, onChange }: DropdownPropsTypes) => {
-	return <DropdownWrapper>{children}</DropdownWrapper>;
+	const [isOpen, open, close] = useBoolean();
+	return (
+		<DropdownContext.Provider
+			value={{ value, onChange, label, isOpen, open, close }}
+		>
+			<DropdownWrapper>{children}</DropdownWrapper>
+		</DropdownContext.Provider>
+	);
+};
+
+const DropdownTrigger = ({ as }: { as: JSX.Element }) => {
+	const { open } = useContext(DropdownContext);
+
+	return <div onClick={open}>{as}</div>;
+};
+
+const DropdownMenu = ({ children }: { children: ReactNode }) => {
+	const { isOpen } = useContext(DropdownContext);
+
+	return <>{isOpen && <DropdownMenuWrapper>{children}</DropdownMenuWrapper>}</>;
+};
+
+const DropdownItem = ({ children }: { children: string }) => {
+	const { onChange, close } = useContext(DropdownContext);
+	const handleSelect = () => {
+		onChange(children);
+		close();
+	};
+
+	return (
+		<DropdownItemWrapper onClick={handleSelect}>{children}</DropdownItemWrapper>
+	);
 };
 
 Dropdown.Trigger = DropdownTrigger;
 Dropdown.Menu = DropdownMenu;
 Dropdown.Item = DropdownItem;
-
 export default Dropdown;

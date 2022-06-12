@@ -17,7 +17,6 @@ const FrameworkSelect = () => {
 		data: { frameworks },
 	} = useFrameworks();
 
-	// const [isOpen, open, close] = useBoolean();
 	const [selected, onChange] = useState("");
 
 	return (

@@ -1,17 +1,12 @@
 interface InputButtonProps {
 	label?: string;
 	value: string;
-	onClick?: () => void;
 }
 
-export default function InputButton({
-	label,
-	value,
-	onClick,
-}: InputButtonProps) {
+export default function InputButton({ value }: InputButtonProps) {
 	return (
-		<label htmlFor='inputButton' onClick={onClick}>
-			{label}
+		<label htmlFor='inputButton'>
+			React Framewrok
 			<div>
 				<input id='inputButton' value={value} />
 			</div>

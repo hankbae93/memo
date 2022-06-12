@@ -22,7 +22,7 @@ const RFselect = () => {
 
 	return (
 		<div>
-			<InputButton label='React Framework' value={selected} onClick={open} />
+			{/* <InputButton label='React Framework' value={selected} onClick={open} />
 			{isOpen && (
 				<Options onClick={close}>
 					{options.map((option) => {
@@ -36,7 +36,7 @@ const RFselect = () => {
 						);
 					})}
 				</Options>
-			)}
+			)} */}
 		</div>
 	);
 };
