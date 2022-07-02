@@ -16,6 +16,10 @@
 
   - [Headless](https://github.com/ranjafunc/TIL/tree/main/FE/React/component_pattern/toss.md)
 
+- Memoization
+
+  - [Memoization](https://github.com/ranjafunc/TIL/tree/main/FE/React/memozation/README.md)
+
 ### 4. Next.js
 
 ### 5. Node.js

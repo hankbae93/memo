@@ -113,8 +113,12 @@ function parseCoordinate(arg1: unknown, arg2?: unknown): Coordinate {
 		x: 0,
 		y: 0,
 	};
-
-	if (typeof arg1 === "object") {
+	if (typeof arg1 === "string") {
+		(arg1 as string).split(",").forEach((str) => {
+			const [key, value] = str.split(":");
+			coord[key as "x" | "y"] = parseInt(value, 10);
+		});
+	} else if (typeof arg1 === "object") {
 		coord = {
 			...(arg1 as Coordinate),
 		};
@@ -128,13 +132,13 @@ function parseCoordinate(arg1: unknown, arg2?: unknown): Coordinate {
 	return coord;
 }
 
-console.log(parseCoordinate("12"));
+console.log(parseCoordinate("x:12,y:35"));
 console.log(parseCoordinate(12, 34));
 console.log(parseCoordinate({ x: 52, y: 61 }));
 ```
 
-<img src="../docsImg/overload1.png"/>
-
 ```ts
 function parseCoordinate(str: string): Coordinate (+2 overloads)
 ```
+
+<img src="../docsImg/overload1.png"/>
