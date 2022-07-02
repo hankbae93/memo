@@ -6,6 +6,8 @@
 
 ### 2. TypeScript
 
+- [함수 overloading](https://github.com/ranjafunc/TIL/tree/main/TS/README.md#)
+
 ### 3. React
 
 - React Pattern
