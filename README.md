@@ -6,7 +6,7 @@
 
 ### 2. TypeScript
 
-- [함수 overloading](https://github.com/ranjafunc/TIL/tree/main/TS/README.md#)
+- [함수 overloading](https://github.com/ranjafunc/TIL/blob/main/TS/README.md#%ED%95%A8%EC%88%98-overloading)
 
 ### 3. React
 
