@@ -114,7 +114,7 @@ http://cdn.image?src=[img SRC]&width=200&height=100`
 
 이번에는 라이트하우스 탭에서 사용하지 않는 함수를 줄여라라는 항목을 발견했는데요.
 
-어떤 스크립트가 문제인지는 번들링되어 확인하기 힘들기 때문에 퍼포먼스 탭을 활용해야합니다.
+어떤 스크립트가 문제인지는 번들링되어 확인하기 힘들기 때문에 퍼포먼스 탭을 활용해야 합니다.
 
 <img src="../../docsImg/optimze9.png" />
 
@@ -235,3 +235,133 @@ html,css,js의 텍스트들을 압축해서 서버가 보내주면 우리는 빨
 서버에서 압축하면 클라이언트에서 그파일을 압축해제하는 과정이 필요한데
 
 2kb 이상인 파일이면 압축해주는 게 좋고 그 이하면 하지 않는게 오히려 성능에 좋을 수 있다.
+
+<br />
+
+## `animation 최적화`
+
+브라우저는 초당 60 frame으로 화면을 그린다. 그러나 어떤 이유로 초당 frame이 떨어지면
+
+쟁크 현상이 생긴다.(애니메이션이 버벅인다)
+
+보통 브라우저의 렌더링 과정을 짧은 시간안에 많이 반복하기 때문에 성능 저하로 인한 쟁크 현상이 생긴다.
+
+    브라우저의 렌더링 과정
+    DOM+CSSOM => Render Tree => Layout => Paint => Composite
+
+- [width, height] : 모든 과정이 다시 재실행된다. (`Reflow`)
+- [color, background-color] : Layout 과정이 생략된다 (`Repaint`)
+- [transform, opacity] : Reflow와 Repaint를 피하기 위해 `GPU`의 도움을 받는다. (Layout, Paint 과정 둘다 생략)
+
+<br/>
+
+## `LazyLoading`의 단점
+
+처음 전체 리소스를 불러올 때는 리소스가 줄어 속도가 빨라졌지만
+
+클릭한 순간 모듈을 불러올 때 실제로 코드가 실행되는 순간은 오히려 더 느려질 수 있다.
+
+이럴 때 필요해지기 전에 미리 로드해놓는 것을 `Preload`라고 한다.
+
+<br/>
+
+## `PreLoad`
+
+클릭을 예로 들면 타이밍은 버튼 위에 마우스를 올려놨을때로 볼 수 있다.
+
+```tsx
+import React, { Suspense, useState, lazy } from "react";
+const LazyImageModal = lazy(() => import("./components/ImageModal"));
+
+function App() {
+	const [showModal, setShowModal] = useState(false);
+
+	const handleMouseEnter = () => {
+		const component = import("./components/ImageModal");
+	};
+
+	return (
+		<>
+			<ButtonModal
+				onMouseEnter={handleMouseEnter}
+				onClick={() => {
+					setShowModal(true);
+				}}
+			>
+				올림픽 사진 보기
+			</ButtonModal>
+
+			<Suspense fallback={null}>
+				{showModal ? (
+					<LazyImageModal
+						closeModal={() => {
+							setShowModal(false);
+						}}
+					/>
+				) : null}
+			</Suspense>
+		</>
+	);
+}
+```
+
+만약 모듈이 생각보다 무거워 짧은 시간안에는 무리가 있다면
+
+최초 페이지 로드가 되고 마운트가 끝났을 때 Preload하는 것도 괜찮다.
+
+```tsx
+import React, { Suspense, useState, lazy, useEffect } from "react";
+const LazyImageModal = lazy(() => import("./components/ImageModal"));
+
+function App() {
+	const [showModal, setShowModal] = useState(false);
+
+	useEffect(() => {
+		const component = import("./components/ImageModal");
+	}, []);
+
+	return (
+		<>
+			<ButtonModal
+				onClick={() => {
+					setShowModal(true);
+				}}
+			>
+				올림픽 사진 보기
+			</ButtonModal>
+
+			<Suspense fallback={null}>
+				{showModal ? (
+					<LazyImageModal
+						closeModal={() => {
+							setShowModal(false);
+						}}
+					/>
+				) : null}
+			</Suspense>
+		</>
+	);
+}
+```
+
+<img src="../../docsImg/optimze11.png" />
+
+첫 번들링된 청크를 부르고 후에 2,3 청크를 로드하는 걸 확인할 수 있다.
+
+## `Image Preload`
+
+```tsx
+const img = new Image();
+img.src =
+	"https://stillmed.olympic.org/media/Photos/2016/08/20/part-1/20-08-2016-Football-Men-01.jpg?interpolation=lanczos-none&resize=*:800";
+```
+
+마운트가 끝나고 이미지 객체를 활용해 미리 로드하고 캐싱된 이미지로 리소스를 불러오게 할 수 있다.
+
+```zsh
+cache-control: private, max-age=1501
+```
+
+<img src="../../docsImg/optimze12.png" />
+
+(disk cache)라는 문구를 확인할 수 있다.

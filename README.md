@@ -20,6 +20,8 @@
 
   - [Memoization](https://github.com/ranjafunc/TIL/tree/main/FE/React/memozation/README.md)
 
+  - [Optimization](https://github.com/ranjafunc/TIL/tree/main/FE/React/optimize/README.md)
+
 ### 4. Next.js
 
 ### 5. Node.js
