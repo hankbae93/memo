@@ -32,24 +32,44 @@ const [str2getter, str2setter] = simpleState<null | string>(null);
 console.log(str2getter());
 str2setter("stre");
 console.log(str2getter());
-// let _val;
 
-// function useState<T>(initial: T): [T, (v: T) => void] {
-// 	let val: T = initial || _val;
+interface Rank<RankItem> {
+	item: RankItem;
+	rank: number;
+}
 
-// 	return [
-// 		(function () {
-// 			return val;
-// 		})(),
-// 		(v: T) => {
-// 			val = v;
-// 		},
-// 	];
-// }
+function ranker<RankItem>(
+	items: RankItem[],
+	rank: (v: RankItem) => number
+): RankItem[] {
+	const ranks: Rank<RankItem>[] = items.map((item) => ({
+		item,
+		rank: rank(item),
+	}));
 
-// const [state, setState] = useState<number>(0);
+	ranks.sort((a, b) => a.rank - b.rank);
 
-// console.log(state);
-// setState(12);
-// console.log(state);
-// function ranker
+	return ranks.map((rank) => rank.item);
+}
+
+interface Pokemon {
+	name: string;
+	hp: number;
+}
+
+const pokemon: Pokemon[] = [
+	{
+		name: "BBUUB",
+		hp: 20,
+	},
+	{
+		name: "DDBV",
+		hp: 41,
+	},
+	{
+		name: "ACA",
+		hp: 12,
+	},
+];
+
+const ranks = ranker(pokemon, ({ hp }) => hp);
