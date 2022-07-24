@@ -14,6 +14,7 @@
   - [03 - 코드 생성과 타입이 관계없음을 이해하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/03_%EC%BD%94%EB%93%9C_%EC%83%9D%EC%84%B1%EA%B3%BC_%ED%83%80%EC%9E%85%EC%9D%B4_%EA%B4%80%EA%B3%84%EC%97%86%EC%9D%8C%EC%9D%84_%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0.md)
   - [04 - 구조적 타이핑 익숙해지기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/04_%EA%B5%AC%EC%A1%B0%EC%A0%81_%ED%83%80%EC%9D%B4%ED%95%91_%EC%9D%B5%EC%88%99%ED%95%B4%EC%A7%80%EA%B8%B0.md)
   - [05 - any 타입 지양하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/05_any_%ED%83%80%EC%9E%85_%EC%A7%80%EC%96%91%ED%95%98%EA%B8%B0.md)
+  - [06 - 편집기를 사용하여 타입시스템 탐색하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/06_%ED%8E%B8%EC%A7%91%EA%B8%B0%EB%A5%BC_%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC_%ED%83%80%EC%9E%85%EC%8B%9C%EC%8A%A4%ED%85%9C_%ED%83%90%EC%83%89%ED%95%98%EA%B8%B0.md)
 
 ### 3. `React`
 
