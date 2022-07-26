@@ -1,33 +1,36 @@
-type C = { c: string };
-type D = { c: number; d?: string };
-type F = { f: object };
+class Cylinder {
+	radius = 1;
+	height = 1;
+}
 
-type U2 = keyof (C | D); // "c"
-type U3 = keyof (C & D); // "c" | "d"
-type U4 = keyof (C | F); // never
-type U5 = keyof (C & F); // "c" | "f"
+function caculateVolume(shape: unknown) {
+	if (shape instanceof Cylinder) {
+		console.log(shape.radius);
+	}
+}
 
-type EE = C | F;
+const d: Cylinder = { radius: 2, height: 10 };
+
+const v = typeof Cylinder; // function
+type T = typeof Cylinder;
+
+declare let fn: T;
+const c = new fn();
+
+type C = InstanceType<typeof Cylinder>; // Cylinder
+
 interface Person {
-	name: string;
+	first: string;
+	last: string;
 }
 
-interface Lifespan {
-	birth: Date;
-	detath?: Date;
-}
+const p: Person = { first: "Hankk", last: "sure" };
 
-type PersonSpan = Person & Lifespan;
-type DD = Person | Lifespan;
+const first: Person["first"] = p["first"];
 
-const 김치: DD = {
-	birth: new Date(),
-	name: "dd",
-	detath: new Date(),
-};
+// function email(options: { person: Person, subject: string, body: string}) {}
 
-const 김치2: PersonSpan = {
-	birth: new Date(),
-	name: "dd",
-	detath: new Date(),
-};
+function email({ person, email, body }) {}
+
+type T1 = "string literal";
+const v1 = "string literal";

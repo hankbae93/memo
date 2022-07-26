@@ -16,6 +16,7 @@
   - [05 - any 타입 지양하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/05_any_%ED%83%80%EC%9E%85_%EC%A7%80%EC%96%91%ED%95%98%EA%B8%B0.md)
   - [06 - 편집기를 사용하여 타입시스템 탐색하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/06_%ED%8E%B8%EC%A7%91%EA%B8%B0%EB%A5%BC_%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC_%ED%83%80%EC%9E%85%EC%8B%9C%EC%8A%A4%ED%85%9C_%ED%83%90%EC%83%89%ED%95%98%EA%B8%B0.md)
   - [07 - 타입이 값들의 집합이라고 생각히기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/07_%ED%83%80%EC%9E%85%EC%9D%B4_%EA%B0%92%EB%93%A4%EC%9D%98_%EC%A7%91%ED%95%A9%EC%9D%B4%EB%9D%BC%EA%B3%A0_%EC%83%9D%EA%B0%81%ED%9E%88%EA%B8%B0.md)
+  - [08 - 타입 공간과 값 공간의 심벌 구분하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/%ED%83%80%EC%9E%85%20%EA%B3%B5%EA%B0%84%EA%B3%BC%20%EA%B0%92%20%EA%B3%B5%EA%B0%84%EC%9D%98%20%EC%8B%AC%EB%B2%8C%20%EA%B5%AC%EB%B6%84%ED%95%98%EA%B8%B0.md)
 
 ### 3. `React`
 
