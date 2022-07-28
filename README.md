@@ -17,6 +17,7 @@
   - [06 - 편집기를 사용하여 타입시스템 탐색하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/06_%ED%8E%B8%EC%A7%91%EA%B8%B0%EB%A5%BC_%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC_%ED%83%80%EC%9E%85%EC%8B%9C%EC%8A%A4%ED%85%9C_%ED%83%90%EC%83%89%ED%95%98%EA%B8%B0.md)
   - [07 - 타입이 값들의 집합이라고 생각히기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/07_%ED%83%80%EC%9E%85%EC%9D%B4_%EA%B0%92%EB%93%A4%EC%9D%98_%EC%A7%91%ED%95%A9%EC%9D%B4%EB%9D%BC%EA%B3%A0_%EC%83%9D%EA%B0%81%ED%9E%88%EA%B8%B0.md)
   - [08 - 타입 공간과 값 공간의 심벌 구분하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/08_타입_공간과_값_공간의_심벌_구분하기.md)
+  - [09 - 타입 단언보다는 타입 선언을 사용하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/09_타입_단언보다는_타입_선언을_사용하기.md)
 
 ### 3. `React`
 

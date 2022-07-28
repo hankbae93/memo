@@ -1,36 +1,19 @@
-class Cylinder {
-	radius = 1;
-	height = 1;
-}
-
-function caculateVolume(shape: unknown) {
-	if (shape instanceof Cylinder) {
-		console.log(shape.radius);
-	}
-}
-
-const d: Cylinder = { radius: 2, height: 10 };
-
-const v = typeof Cylinder; // function
-type T = typeof Cylinder;
-
-declare let fn: T;
-const c = new fn();
-
-type C = InstanceType<typeof Cylinder>; // Cylinder
-
 interface Person {
-	first: string;
-	last: string;
+	name: string;
 }
 
-const p: Person = { first: "Hankk", last: "sure" };
+const alice: Person = { name: "Alice" };
+const bob = { name: "bob", occupation: "dd" } as Person;
 
-const first: Person["first"] = p["first"];
+const b = 1 as Person;
 
-// function email(options: { person: Person, subject: string, body: string}) {}
+const people = ["alice", "bok", "jane"].map((name): Person => ({ name }));
 
-function email({ person, email, body }) {}
+document.querySelector("#myButton").addEventListener("click", (e) => {
+	e.currentTarget; // EventTarget
+	const button = e.currentTarget as HTMLButtonElement;
+});
 
-type T1 = "string literal";
-const v1 = "string literal";
+const elNull = document.getElementById("Foo");
+
+elNull.getAnimations();
