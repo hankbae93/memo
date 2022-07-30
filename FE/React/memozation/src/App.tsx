@@ -1,38 +1,27 @@
-import { useState, useMemo } from "react";
-import Title from "./components/Title";
-import { getAvgPerHour } from "./utils/index";
+import { useState } from "react";
+
+const hardCalulate = (num: number): number => {
+	console.log("어려운 계산");
+	for (let i = 0; i < 999999999999; i++) {} // 연산 시간
+	return num + 10000;
+};
 
 const App = () => {
-	const [list, setList] = useState<string[]>([]);
-	const [todo, setTodo] = useState<string>("");
+	const [hardNumber, sethardNumber] = useState(1);
 
-	const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setTodo(e.target.value);
-	};
+	const hardSum = hardCalulate(hardNumber);
 
-	const onSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		setList([...list, todo]);
-		setTodo("");
-	};
-
-	const avgPerHour = useMemo(() => getAvgPerHour(list), [list]);
+	const location = {};
 
 	return (
 		<>
-			<Title title='1시간 안에 끝내야 할 업무들' />
-			<div>
-				<form onSubmit={onSubmit}>
-					<input value={todo} onChange={onChange} />
-				</form>
-
-				<ul>
-					{list.map((value, index) => (
-						<li key={index}>{value}</li>
-					))}
-				</ul>
-				<div>하나당 최대 걸려야할 시간: {avgPerHour}분</div>
-			</div>
+			<h3>title</h3>
+			<input
+				type='number'
+				value={hardNumber}
+				onChange={(e) => sethardNumber(parseInt(e.target.value))}
+			/>
+			<span> + 10000 = {hardSum} </span>
 		</>
 	);
 };
