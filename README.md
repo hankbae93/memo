@@ -20,6 +20,7 @@
   - [09 - 타입 단언보다는 타입 선언을 사용하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/09_타입_단언보다는_타입_선언을_사용하기.md)
   - [10 - 객체 래퍼 타입 피하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/10_객체_래퍼_타입_피하기.md)
   - [11 - 잉여 속성 체크의 한계 인지하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/11_잉여_속성_체크의_한계_인지하기.md)
+  - [12 - 함수 표현식에 타입 적용하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/12_함수_표현식에_타입_적용하기.md)
 
 ### 3. `React`
 
