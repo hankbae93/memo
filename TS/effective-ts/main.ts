@@ -1,7 +1,12 @@
-function isGreeting(pharse: String) {
-	return ["hello", "good day"].includes(pharse);
-	/*
-	'String' 형식의 인수는 'string' 형식의 매개 변수에 할당될 수 없습니다.
-  string'은(는) 기본 개체이지만 'String'은(는) 래퍼 개체입니다. 가능한 경우 'string'을(를) 사용하세요.ts(2345)
-	*/
+interface Options {
+	title: string;
+	darkMode?: boolean;
 }
+
+const o1: Options = document;
+const o2: Options = new HTMLAnchorElement();
+const o: Options = { darkmode: false, title: "ski" };
+/*
+'{ darkmode: boolean; title: string; }' 형식은 'Options' 형식에 할당할 수 없습니다.
+  개체 리터럴은 알려진 속성만 지정할 수 있지만 'Options' 형식에 'darkmode'이(가) 없습니다. 'darkMode'을(를) 쓰려고 했습니까?
+*/
