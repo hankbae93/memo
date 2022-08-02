@@ -1,17 +1,12 @@
-type BinaryFn = (a: number, b: number) => number;
+interface Name {
+	first: string;
+}
 
-const add: BinaryFn = (a, b) => a + b;
-const sub: BinaryFn = (a, b) => a - b;
+interface Name {
+	last: string;
+}
 
-declare function fetch(
-	input: RequestInfo,
-	init: RequestInit
-): Promise<Response>;
-
-const checkedFetch: typeof fetch = async (input, init) => {
-	const response = await fetch(input, init);
-	if (!response.ok) {
-		throw new Error("Request failed: " + response.status);
-	}
-	return response;
+const A: Name = {
+	first: "",
+	last: "",
 };
