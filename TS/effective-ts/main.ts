@@ -1,12 +1,10 @@
 interface Name {
 	first: string;
-}
-
-interface Name {
 	last: string;
 }
 
-const A: Name = {
-	first: "",
-	last: "",
+type Pick2<T, K extends keyof T> = {
+	[k in K]: T[k];
 };
+
+type FirstLast = Pick2<Name, "first" | "last">;
