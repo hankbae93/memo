@@ -1,10 +1,15 @@
-interface Name {
-	first: string;
-	last: string;
-}
+type Vec3D = Record<"x" | "y" | "z", number>;
 
-type Pick2<T, K extends keyof T> = {
-	[k in K]: T[k];
+const vec3D: Vec3D = {
+	x: 1,
+	y: 2,
+	z: 3,
 };
 
-type FirstLast = Pick2<Name, "first" | "last">;
+type ABC = { [k in "a" | "b" | "c"]: k extends "b" ? string : number };
+
+const abc: ABC = {
+	a: 1,
+	b: "String",
+	c: 2,
+};
