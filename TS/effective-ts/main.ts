@@ -1,15 +1,9 @@
-type Vec3D = Record<"x" | "y" | "z", number>;
+const b: ArrayLike<string> = ["1", "2", "3"];
 
-const vec3D: Vec3D = {
-	x: 1,
-	y: 2,
-	z: 3,
-};
-
-type ABC = { [k in "a" | "b" | "c"]: k extends "b" ? string : number };
-
-const abc: ABC = {
-	a: 1,
-	b: "String",
-	c: 2,
+const d: [1, 2, 3] = [1, 2, 3];
+const c: ArrayLike<string> = {
+	0: "1",
+	1: "2",
+	2: "3",
+	length: 3,
 };
