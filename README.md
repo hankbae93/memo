@@ -25,6 +25,7 @@
   - [14 - 타입 연산과 제너릭 사용으로 반복 줄이기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/14_타입_연산과_제너릭_사용으로_반복_줄이기.md)
   - [15 - 동적 데이터에 인덱스 시그니쳐 사용하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/15_동적_데이터에_인덱스_시그니쳐_사용하기.md)
   - [16 - number 인덱스 시그니처보다는 Array, 튜플, ArrayLike를 사용하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/16_number_인덱스_시그니처보다는_Array,_튜플,_ArrayLike를_사용하기.md)
+  - [17 - 변경 관련된 오류 방지를 위해 readonly 사용하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/17_변경_관련된_오류_방지를_위해_readonly_사용하기.md)
 
 ### 3. `React`
 
