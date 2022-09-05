@@ -27,6 +27,7 @@
   - [15 - 동적 데이터에 인덱스 시그니쳐 사용하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/15_동적_데이터에_인덱스_시그니쳐_사용하기.md)
   - [16 - number 인덱스 시그니처보다는 Array, 튜플, ArrayLike를 사용하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/16_number_인덱스_시그니처보다는_Array,_튜플,_ArrayLike를_사용하기.md)
   - [17 - 변경 관련된 오류 방지를 위해 readonly 사용하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/17_변경_관련된_오류_방지를_위해_readonly_사용하기.md)
+  - [18 - 매핑된 타입을 사용하여 값을 동기화하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/18_매핑된_타입을_사용하여_값을_동기화하기.md)
 
 - `Design Pattern`
   - [Factory 패턴](https://github.com/ranjafunc/TIL/blob/main/TS/design-pattern/factory/factory.md)

@@ -1,9 +1,30 @@
-interface Outer {
-	inner: {
-		x: number;
-	};
-}
+interface ScatterProps {
+	xs: number[];
+	ys: number[];
 
-const o: Readonly<Outer> = { inner: { x: 0 } };
-o.inner = { x: 1 }; // ~~ 읽기 전용 속성이므로 'inner'에 할당할 수 없습니다.ts(2540)
-o.inner.x = 2;
+	xRange: [number, number];
+	yRange: [number, number];
+	color: string;
+
+	onClick: (x: number, y: number, index: number) => void;
+}
+const REQURES_STATE: { [k in keyof ScatterProps]: boolean } = {
+	xs: true,
+	ys: true,
+	xRange: true,
+	yRange: true,
+	color: true,
+	onClick: false,
+};
+
+function shouldUpdate(oldProps: ScatterProps, newProps: ScatterProps) {
+	let k: keyof ScatterProps;
+
+	for (k in oldProps) {
+		if (oldProps[k] !== newProps[k] && REQURES_STATE[k]) {
+			return true;
+		}
+	}
+
+	return false;
+}
