@@ -9,6 +9,7 @@
 - [함수 overloading](https://github.com/ranjafunc/TIL/blob/main/TS/README.md#%ED%95%A8%EC%88%98-overloading)
 
 - 이펙티브 타입스크립트 TIL
+
   - [01 - TypeScript는 JavaScript의 Superset이다.](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/01_%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%99%80_%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98_%EA%B4%80%EA%B3%84.md)
   - [02 - tsconfig](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/02_%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98_%EC%84%A4%EC%A0%95%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0.md)
   - [03 - 코드 생성과 타입이 관계없음을 이해하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/03_%EC%BD%94%EB%93%9C_%EC%83%9D%EC%84%B1%EA%B3%BC_%ED%83%80%EC%9E%85%EC%9D%B4_%EA%B4%80%EA%B3%84%EC%97%86%EC%9D%8C%EC%9D%84_%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0.md)
@@ -26,6 +27,10 @@
   - [15 - 동적 데이터에 인덱스 시그니쳐 사용하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/15_동적_데이터에_인덱스_시그니쳐_사용하기.md)
   - [16 - number 인덱스 시그니처보다는 Array, 튜플, ArrayLike를 사용하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/16_number_인덱스_시그니처보다는_Array,_튜플,_ArrayLike를_사용하기.md)
   - [17 - 변경 관련된 오류 방지를 위해 readonly 사용하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/17_변경_관련된_오류_방지를_위해_readonly_사용하기.md)
+
+- `Design Pattern`
+  - [Factory 패턴](https://github.com/ranjafunc/TIL/blob/main/TS/design-pattern/factory/factory.md)
+  - [Abstract Factory 패턴](https://github.com/ranjafunc/TIL/blob/main/TS/design-pattern/abstract-factory/abstract-factory.md)
 
 ### 3. `React`
 
