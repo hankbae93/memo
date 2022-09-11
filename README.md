@@ -46,6 +46,8 @@
 
   - [Optimization](https://github.com/ranjafunc/TIL/tree/main/FE/optimize/README.md)
 
+  - [Optimization 2](https://github.com/ranjafunc/TIL/tree/main/FE/optimize/README2.md)
+
 ### 4. Next.js
 
 ### 5. Node.js
