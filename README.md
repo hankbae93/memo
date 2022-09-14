@@ -33,6 +33,8 @@
 - `Design Pattern`
   - [Factory 패턴](https://github.com/ranjafunc/TIL/blob/main/TS/design-pattern/factory/factory.md)
   - [Abstract Factory 패턴](https://github.com/ranjafunc/TIL/blob/main/TS/design-pattern/abstract-factory/abstract-factory.md)
+  - [Builder 패턴](https://github.com/ranjafunc/TIL/blob/main/TS/design-pattern/builder/builder.md)
+  - [Prototype 패턴](https://github.com/ranjafunc/TIL/blob/main/TS/design-pattern/prototype/prototype.md)
 
 ### 3. `React`
 
