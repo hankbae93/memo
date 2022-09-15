@@ -35,6 +35,7 @@
   - [Abstract Factory 패턴](https://github.com/ranjafunc/TIL/blob/main/TS/design-pattern/abstract-factory/abstract-factory.md)
   - [Builder 패턴](https://github.com/ranjafunc/TIL/blob/main/TS/design-pattern/builder/builder.md)
   - [Prototype 패턴](https://github.com/ranjafunc/TIL/blob/main/TS/design-pattern/prototype/prototype.md)
+  - [Singleton 패턴](https://github.com/ranjafunc/TIL/blob/main/TS/design-pattern/singleton/singleton.md)
 
 ### 3. `React`
 
