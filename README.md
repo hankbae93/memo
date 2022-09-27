@@ -30,6 +30,7 @@
   - [18 - 매핑된 타입을 사용하여 값을 동기화하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/18_매핑된_타입을_사용하여_값을_동기화하기.md)
   - [19 - 추론 가능한 타입을 사용해 장황한 코드 방지하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/19_추론_가능한_타입을_사용해_장황한_코드_방지하기.md)
   - [20 - 다른 타입에는 다른 변수 사용하기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/20_다른_타입에는_다른_변수_사용하기.md)
+  - [21 - 타입 넓히기](https://github.com/ranjafunc/TIL/blob/main/TS/effective-ts/21_타입_넓히기.md)
 
 - `Design Pattern`
   - [Factory 패턴](https://github.com/ranjafunc/TIL/blob/main/TS/design-pattern/factory/factory.md)
