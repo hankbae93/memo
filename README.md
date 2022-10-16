@@ -31,7 +31,7 @@
 
   - [Optimization 2](https://github.com/ranjafunc/TIL/tree/main/FE/optimize/README2.md)
 
-  - [react-query-timer](https://github.com/ranjafunc/TIL/tree/main/FE/react-query-timer/src/components/timer.tsx)
+  - [react-query-timer](https://github.com/ranjafunc/TIL/tree/main/FE/react-query-timer/src/hooks/useTimer.ts)
 
 ### 4. Next.js
 
