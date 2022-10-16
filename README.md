@@ -31,6 +31,8 @@
 
   - [Optimization 2](https://github.com/ranjafunc/TIL/tree/main/FE/optimize/README2.md)
 
+  - [react-query-timer](https://github.com/ranjafunc/TIL/tree/main/FE/react-query-timer/src/components/timer.tsx)
+
 ### 4. Next.js
 
 - [dApp 세팅](https://github.com/ranjafunc/TIL/blob/main/FE/NextJs/dApp-setting.md)
